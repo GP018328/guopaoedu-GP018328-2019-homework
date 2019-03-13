@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="guopaoedu-GP018328-2019-homework:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/guopaoedu_GP018328_2019_homework_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="guopaoedu-GP018328-2019-homework/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="guopaoedu-GP018328-2019-homework" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

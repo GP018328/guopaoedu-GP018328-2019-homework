@@ -1,0 +1,103 @@
+@startuml
+
+interface IProduct
+
+interface IProduct{
+}
+
+class ProductA {
+}
+
+IProduct<|--ProductA
+
+class ProductB {
+}
+
+IProduct<|--ProductB
+
+interface IFactory
+
+interface IFactory{
+IProduct createProduct()
+}
+
+IProduct<..IFactory
+
+class FactoryMethodA{
+IProduct createProduct()
+}
+
+IFactory<|--FactoryMethodA
+ProductA<..FactoryMethodA
+
+class FactoryMethodB{
+IProduct createProduct()
+}
+
+IFactory<|--FactoryMethodB
+ProductB<..FactoryMethodB
+
+interface IProduct_New
+
+interface IProduct_New{
+}
+
+class ProductA_New {
+}
+
+IProduct_New<|--ProductA_New
+
+class ProductB_New {
+}
+
+IProduct_New<|--ProductB_New
+
+interface IFactory_New
+
+interface IFactory_New{
+IProduct_New createProduct_New()
+}
+
+IProduct_New<..IFactory_New
+
+class FactoryMethodA_New{
+IProduct_New createProduct()
+}
+
+IFactory_New<|--FactoryMethodA_New
+ProductA_New<..FactoryMethodA_New
+
+class FactoryMethodB_New{
+IProduct_New createProduct()
+}
+
+IFactory_New<|--FactoryMethodB_New
+ProductB_New<..FactoryMethodB_New
+
+
+interface IAbstractFactory
+
+interface IAbstractFactory{
+IProduct createProduct()
+IProduct_New createProduct_New()
+}
+
+IProduct<..IAbstractFactory
+IProduct_New<..IAbstractFactory
+
+class Factory_TopA{
+}
+
+IAbstractFactory<|--Factory_TopA
+Factory_TopA..>FactoryMethodA
+Factory_TopA..>FactoryMethodB_New
+
+class Factory_TopB{
+}
+
+IAbstractFactory<|--Factory_TopB
+Factory_TopB..>FactoryMethodB
+Factory_TopB..>FactoryMethodA_New
+
+
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+
+interface IProduct
+
+interface IProduct{
+}
+
+class ProductA {
+}
+
+IProduct<|--ProductA
+
+class ProductB {
+}
+
+IProduct<|--ProductB
+
+interface IFactory
+
+interface IFactory{
+IProduct createProduct()
+}
+
+IProduct<..IFactory
+
+class FactoryMethodA{
+IProduct createProduct()
+}
+
+IFactory<|--FactoryMethodA
+ProductA<..FactoryMethodA
+
+class FactoryMethodB{
+IProduct createProduct()
+}
+
+IFactory<|--FactoryMethodB
+ProductB<..FactoryMethodB
+
+@enduml

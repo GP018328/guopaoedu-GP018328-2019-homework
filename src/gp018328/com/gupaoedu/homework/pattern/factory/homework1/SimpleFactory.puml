@@ -1,0 +1,27 @@
+@startuml
+
+interface IProduct
+
+interface IProduct{
+void product()
+}
+
+class ProductA {
+void product()
+}
+
+IProduct<|--ProductA
+
+class ProductB {
+void product()
+}
+
+IProduct<|--ProductB
+
+class Factory{
+ IProduct createProduct(String productType)
+}
+
+Factory..>IProduct
+
+@enduml
