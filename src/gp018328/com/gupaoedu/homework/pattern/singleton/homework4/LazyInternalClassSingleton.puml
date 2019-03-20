@@ -1,0 +1,27 @@
+@startuml
+
+autonumber
+
+actor Thread
+activate Thread
+
+Thread -> LazyInternalClassSingleton: load
+note right : 外部类加载!
+activate LazyInternalClassSingleton
+
+Thread ->LazyInternalClassSingleton:call
+LazyInternalClassSingleton -->"getInstance()":execute
+
+"getInstance()"->LazyHolder:load
+note right : 内部类加载!
+activate LazyHolder
+
+LazyHolder-->"getInstance()":ok
+"getInstance()"-->LazyInternalClassSingleton:ok
+LazyInternalClassSingleton-->Thread :ok
+
+deactivate LazyHolder
+deactivate LazyInternalClassSingleton
+deactivate Thread
+
+@enduml
