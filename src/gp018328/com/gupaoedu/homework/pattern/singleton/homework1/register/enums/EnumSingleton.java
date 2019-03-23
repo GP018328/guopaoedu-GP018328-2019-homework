@@ -1,4 +1,4 @@
-package gp018328.com.gupaoedu.homework.pattern.singleton.homework1.enums;
+package gp018328.com.gupaoedu.homework.pattern.singleton.homework1.register.enums;
 
 import java.io.Serializable;
 

@@ -1,10 +1,8 @@
-package gp018328.com.gupaoedu.homework.pattern.singleton.homework1.enums.test;
+package gp018328.com.gupaoedu.homework.pattern.singleton.homework1.register.enums.test;
 
-import gp018328.com.gupaoedu.homework.pattern.singleton.homework1.enums.EnumSingleton;
-import gp018328.com.gupaoedu.homework.pattern.singleton.homework1.lazy.LazyInternalClassSingleton;
+import gp018328.com.gupaoedu.homework.pattern.singleton.homework1.register.enums.EnumSingleton;
 
 import java.io.*;
-import java.lang.reflect.Constructor;
 
 public class EnumSingletonTest {
     public static void main(String[] args) {

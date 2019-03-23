@@ -1,0 +1,3 @@
+
+见：Dao.copyFrom
+系统设计之初发现许多业务从临时变赋值到正式表，copyFrom用于两个ATable之间的赋值；
